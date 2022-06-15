@@ -127,15 +127,6 @@
         </li>
 
         <li class="menu-item"><a routerLink="/contact">Contact</a></li>
-        <li class="menu-item">
-          <a *ngIf="!login" mat-button (click)="openDialog()">Register</a>
-        </li>
-        <li class="menu-item">
-          <a *ngIf="!login" mat-button (click)="openDialogToLogin()">Login</a>
-        </li>
-        <li class="menu-item">
-          <a *ngIf="!out" mat-button (click)="logout()">logOut</a>
-        </li>
 
         <li *ngIf="admin && !out" class="dropdown">
           <button class="dropbtn">Manage</button>
@@ -148,9 +139,18 @@
           </div>
         </li>
       </ul>
-
+      <li class="menu-item">
+        <a *ngIf="!login" mat-button (click)="openDialog()">Register</a>
+      </li>
+      <li class="menu-item">
+        <a *ngIf="!login" mat-button (click)="openDialogToLogin()">Login</a>
+      </li>
+      <li class="menu-item">
+        <a *ngIf="!out" mat-button (click)="logout()">logOut</a>
+      </li>
       <!-- .menu -->
     </div>
+
     <!-- .main-navigation -->
 
     <div class="mobile-navigation"></div>
